@@ -1,1 +1,1 @@
-body{background:#ccc}.test{background:#999}
+.test{background:#999}.navbar{min-height:100px;background:#E65C24}header .fullheight{background:url("../images/mobilPlus-nyitokep.jpg");background-repeat:no-repeat;background-position:center center;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center}#nav{z-index:100}
