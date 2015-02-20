@@ -1,4 +1,5 @@
 // JavaScript Document
+var topoffset = 120;
   var wheight = $(window).height(); //get height of the window
 
   $('.fullheight').css('height', wheight);

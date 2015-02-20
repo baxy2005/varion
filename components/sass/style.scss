@@ -1,8 +1,10 @@
 /* Scss Document */
-$primary: #E65C24;
-$secondary: #999;
+@import "compass";
+@import "variables";
+@import "mixins";
 
-body{
+h1{
+	font-family: Sica-Regular;
 }
 .test {
 	background: $secondary;
@@ -28,4 +30,7 @@ header .fullheight {
 }
 #nav {
 	z-index: 100;	
+}
+.mainheight {
+	min-height:600px;	
 }
