@@ -23,6 +23,23 @@ var topoffset = 120;
     } //location hostname
   }); //on click
 
+  //highlight navigation
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop() + topoffset;
+    $('nav li a').removeClass('active');
+
+    if (windowpos > $('#link2').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#link2"]').addClass('active');
+    } //windowpos
+
+    if (windowpos > $('#link3').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#link3"]').addClass('active');
+    } //windowpos
+
+  }); //window scroll
+
 
   //set up ScrollMagic
   var controller = new ScrollMagic({

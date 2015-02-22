@@ -1,17 +1,23 @@
 /* Scss Document */
-@import "compass";
+@import  url("//hello.myfonts.net/count/2d5536");
+@font-face {font-family: 'Sica-Bold';src: url('../fonts/webfonts/2D5536_B_0.eot');src: url('../fonts/webfonts/2D5536_B_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/2D5536_B_0.woff2') format('woff2'),url('../fonts/webfonts/2D5536_B_0.woff') format('woff'),url('../fonts/webfonts/2D5536_B_0.ttf') format('truetype');}
+@font-face {font-family: 'Sica-Regular';src: url('../fonts/webfonts/2D5536_3_0.eot');src: url('../fonts/webfonts/2D5536_3_0.eot?#iefix') format('embedded-opentype'),url('../fonts/webfonts/2D5536_3_0.woff2') format('woff2'),url('../fonts/webfonts/2D5536_3_0.woff') format('woff'),url('../fonts/webfonts/2D5536_3_0.ttf') format('truetype');}
+ 
+@import "compass/css3";
 @import "variables";
 @import "mixins";
 
 h1{
-	font-family: Sica-Regular;
+	font-family: $font-primary;
+	color: $color-primary;
 }
 .test {
-	background: $secondary;
+	background: $color-secondary;
 }
 .navbar {
     min-height: 100px;
-	background: $primary;
+	background: $color-primary;
+	
 }
 header .fullheight {
   background: url("../images/mobilPlus-nyitokep.jpg");
@@ -34,3 +40,11 @@ header .fullheight {
 .mainheight {
 	min-height:600px;	
 }
+ul.navbar-nav {
+	a {
+	&.active {
+		background-color: #fff !important;
+    	color: $color-primary;
+          }
+		 }
+		 }
