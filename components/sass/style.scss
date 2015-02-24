@@ -17,6 +17,7 @@ h1{
 .navbar {
     min-height: 100px;
 	background: $color-primary;
+	@include opacity(0.9)
 	
 }
 header .fullheight {
@@ -48,3 +49,21 @@ ul.navbar-nav {
           }
 		 }
 		 }
+		 
+@media (max-width: 768px) {
+	header .fullheight {
+	background: url("../images/mobilPlus-nyitokep.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+	}
+}
