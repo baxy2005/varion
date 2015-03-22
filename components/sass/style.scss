@@ -7,10 +7,85 @@
 @import "variables";
 @import "mixins";
 
+a {
+	color: $color-primary;
+}
+h1, h2, p {
+	text-align: center;
+}
 h1{
 	font-family: $font-primary;
 	color: $color-primary;
+	font-size: $main-header-size;
+	margin-bottom: 0px;
 }
+h2 {
+	font-family: $font-primary;
+	font-size: $secondary-header-size;
+	color: $color-secondary;
+	margin-top: 8px;
+}
+p {	
+	font-family: $font-secondary;
+	font-size: $main-paragraph-size;
+	color: $color-secondary;
+	line-height: 22px;
+}
+.paddingTop {
+	padding-top: 50px;
+	float: none;
+	clear: both;	
+}
+.iconPadding {
+	margin-top:100px;
+	margin-bottom: 30px;	
+}
+.label-small {
+	border: 1px solid $color-border;
+	background-color: transparent;
+	border-radius: 0px;
+	color: $color-secondary;
+	font-size: 14px;
+	font-family: $font-primary;
+	padding: 6px 15px 7px 15px;
+	line-height: 3;
+}
+.bg-orange{
+	background: $color-primary;
+		h1 {
+			color: $color-white;
+	}
+		p {
+			color: $color-white;
+			width: 360px;
+			margin: 0 auto;
+		}
+}
+.bg-lightGray {
+	background-color: $color-lightGray;	
+}
+.bg-darkGray {
+	background-color: $color-secondary;	
+}
+.productLine {
+	h4 {
+		width: 135px;
+		font-family: $font-primary;
+		color: $color-white;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+		background-color: $color-primary;	
+		margin: 0 auto;
+		padding: 6px 2px;
+	}
+	p {
+		width: 239px;
+		font-size: 14px;
+	}
+}
+
+
 .test {
 	background: $color-secondary;
 }
@@ -21,7 +96,7 @@ h1{
 	
 }
 header .fullheight {
-  background: url("../images/mobilPlus-nyitokep-3.jpg");
+  background: url("../images/mobilPlus-nyitokep-4.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -49,12 +124,16 @@ ul.navbar-nav {
           }
 		 }
 		 }
+.hgroup {
+	width: 190px;
+	height: 126px;
+}
 		 
 @media (max-width: 768px) {
 	header .fullheight {
-	background: url("../images/mobilPlus-nyitokep-3.jpg");
+	background: url("../images/mobilPlus-nyitokep-4.jpg");
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: -80px center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
