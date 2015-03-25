@@ -1,5 +1,5 @@
 // JavaScript Document
-var topoffset = 120;
+var topoffset = 90;
   var wheight = $(window).height(); //get height of the window
 
   $('.fullheight').css('height', wheight);
@@ -52,3 +52,4 @@ var topoffset = 120;
   var pin = new ScrollScene({
     triggerElement: '#nav',
   }).setPin('#nav').addTo(controller);
+  

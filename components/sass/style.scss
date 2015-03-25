@@ -8,6 +8,9 @@
 @import "variables";
 @import "mixins";
 
+.fade-in {
+	opacity:0;
+}
 a {
 	color: $color-primary;
 }
@@ -26,6 +29,7 @@ h2 {
 	font-size: $secondary-header-size;
 	color: $color-secondary;
 	margin-top: 8px;
+	margin-bottom: 40px;
 }
 p {	
 	font-family: $font-secondary;
@@ -69,11 +73,13 @@ p {
 			font-weight: bold;
 			color: $color-white;
 			display: block;
-			padding: 13px 0px;
+			padding: 13px 0px ;
 			text-align: center;
 			margin: 0 auto;
 			width: 165px;
 			text-transform: uppercase;
+			margin-top: 60px;
+			margin-bottom: 35px;
 		}
 		ul {
 			padding: 0;
@@ -88,7 +94,9 @@ p {
 			font-family: $font-primary;
 			font-size: 14px;
 			padding: 0.15em 0 0.5em 1.5em;
-
+		}
+		.shift {
+			margin-top: 120px;
 		}
 }
 ul.gallery  {
@@ -113,16 +121,27 @@ ul.gallery  {
 	}
 	.zoom {
 	background: url("../images/mobilPlus-howDoesColor.png") no-repeat scroll center center;
-	cursor: pointer;
-	height: 100%;
-	opacity: 0;
-	position: absolute;
-	transition-duration: 1s;
-	width: 100%;
-	z-index: 10;	
-	background-size: 100% 100%;
-	top: 0px;
-	left: 0px;
+	@include zoomPrep;
+	}
+	.zoom-1 {
+	background: url("../images/mobilPlus-howDoesGray-4.png") no-repeat scroll center center;
+	@include zoomPrep;
+	}
+	.zoom-2 {
+	background: url("../images/mobilPlus-howDoesGray-2.png") no-repeat scroll center center;
+	@include zoomPrep;
+	}
+	.zoom-3 {
+	background: url("../images/mobilPlus-howDoesGray-3.png") no-repeat scroll center center;
+	@include zoomPrep;
+	}
+	.zoom-4 {
+	background: url("../images/mobilPlus-howDoesGray-5.png") no-repeat scroll center center;
+	@include zoomPrep;
+	}
+	.zoom-6 {
+	background: url("../images/mobilPlus-howDoesGray-1.png") no-repeat scroll center center;
+	@include zoomPrep;
 	}
 	.zoom:hover {
 	opacity: 1;
@@ -147,8 +166,17 @@ ul.gallery  {
 .paddingArticleBottom{
 	padding-bottom: 60px;
 }
+.marginProductWireframe {
+	margin-top:  -18px;
+}
 ul.gallery li.marginLiBottom {
 	margin-bottom: 0px !important;
+}
+.paddingTop {
+	padding-top: 40px;
+}
+.boxSecondMargin {
+	margin-top: 80px;	
 }
 hr {
 	color: F4F4F4;
@@ -178,6 +206,7 @@ hr {
 		width: 239px;
 		font-size: 14px;
 		margin: 0 auto;
+		margin-bottom: 20px;
 	}
 }
 .boxIcon {
@@ -215,7 +244,7 @@ hr {
 	background: $color-secondary;
 }
 .navbar {
-    min-height: 100px;
+    min-height: 90px;
 	background: $color-primary;
 	@include opacity(0.9)
 }
@@ -234,6 +263,22 @@ header .fullheight {
   -webkit-justify-content: center;
   justify-content: center;
 }
+.whyBgImage {
+	  background: url("../images/mobilPlus-whyBgImage.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+}
 #nav {
 	z-index: 100;	
 }
@@ -243,6 +288,9 @@ header .fullheight {
 }
 .mainheight {
 	min-height:600px;	
+}
+.navbar-brand {
+	padding: 6px 0 6px 15px;
 }
 ul.navbar-nav {
 	a {
