@@ -1,5 +1,7 @@
 // JavaScript Document
 var topoffset = 90;
+  var isTouch = 'ontouchstart' in document.documentElement;
+
   var wheight = $(window).height(); //get height of the window
 
   $('.fullheight').css('height', wheight);

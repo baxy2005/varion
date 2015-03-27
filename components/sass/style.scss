@@ -11,6 +11,9 @@
 .fade-in {
 	opacity:0;
 }
+.clear {
+	clear: both;
+}
 a {
 	color: $color-primary;
 }
@@ -37,6 +40,9 @@ p {
 	color: $color-secondary;
 	line-height: 22px;
 }
+.paddingZero {
+	padding:0px;	
+}
 .paddingTop {
 	padding-top: 50px;
 	float: none;
@@ -52,9 +58,23 @@ p {
 	border-radius: 0px;
 	color: $color-secondary;
 	font-size: 14px;
-	font-family: $font-primary;
-	padding: 6px 15px 7px 15px;
 	line-height: 3;
+}
+.tagsWord {
+	ul {
+		@include paddingMarginZero;
+		list-style: none;	
+		text-align: center;
+	}
+	li {
+	border: 1px solid $color-border;
+	color: $color-secondary;
+	font-family: $font-primary;
+	padding: 8px 15px 6px 15px;
+	font-weight: bold;
+	margin: 7px 7px;
+	display: inline-block;
+	}
 }
 .bg-orange{
 	background: $color-primary;
@@ -84,6 +104,7 @@ p {
 		ul {
 			padding: 0;
 			list-style: none;
+			margin: 0;
 		}
 		li {
 			color: $color-white;
@@ -304,12 +325,38 @@ ul.navbar-nav {
 	width: 190px;
 	height: 126px;
 }
+footer {
+	min-height: 60px;
+	p {
+	color: #FFF;	
+	vertical-align: middle;
+	}
+}
 		 
 @media (max-width: 768px) {
+.tagsWord {
+	ul {
+		@include paddingMarginZero;
+		list-style: none;	
+		text-align: center;
+	}
+	li {
+	padding: 8px 15px 6px 15px;
+	margin: 7px 0px;
+	display: block;
+	width: 100%
+	}
+	li:last-child{
+		margin-bottom:0px;
+	}
+}
+.paddingZero {
+	padding:0px;	
+}
 	header .fullheight {
 	background: url("../images/mobilPlus-nyitokep-4.jpg");
   background-repeat: no-repeat;
-  background-position: -80px center;
+  background-position: -40px center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -321,4 +368,84 @@ ul.navbar-nav {
   -webkit-justify-content: center;
   justify-content: center;
 	}
+.paddingArticle{
+	padding-top: $paddingArticle-mobil;
+	padding-bottom: $paddingArticle-mobil;
 }
+.paddingArticleTop{
+	padding-top: $paddingArticle-mobil;
+}
+.paddingArticleBottom{
+	padding-bottom: $paddingArticle-mobil;
+}
+h1{
+	font-size: $main-header-size-mobil;
+}
+h2 {
+	font-size: $secondary-header-size-mobil;
+	margin-top: 7px;
+	margin-bottom: 15px;
+}
+p {	
+	font-size: $main-paragraph-size-mobil;
+	line-height: 20px;
+}
+.iconPadding {
+	margin-top: $paddingArticle-mobil;
+	margin-bottom: $paddingArticle-mobil;
+}
+.bg-orange {
+	h3 {
+	margin-top: $paddingArticle-mobil;
+	margin-bottom: $paddingArticle-mobil;
+	}
+	p{
+		width: 100%;
+	}
+	.shift {
+    margin-top: $paddingArticle-mobil;
+}
+}
+.paddingTop {
+    padding-top: $paddingArticle-mobil;
+}
+
+ul.gallery  {
+	li {
+		margin-bottom: $paddingArticle-mobil;
+
+	}
+}
+ul.gallery li.marginLiBottom {
+	margin-bottom: $paddingArticle-mobil !important;
+}
+.marginProductWireframe {
+    margin-top: 0px;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	ul.gallery li.marginLiBottom {
+	margin-bottom: 30px !important;
+}
+}
+@media (min-width: 321px) and (max-width: 767px) {
+#link5 .col-xs-12, #link4 .col-xs-12 {
+    width: 50%;
+}
+header .fullheight {
+  background: url("../images/mobilPlus-nyitokep-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+}
+
