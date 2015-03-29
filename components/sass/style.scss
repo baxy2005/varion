@@ -325,14 +325,54 @@ ul.navbar-nav {
 	width: 190px;
 	height: 126px;
 }
+address, label {
+	color: $color-secondary;
+}
 footer {
 	min-height: 60px;
 	p {
-	color: #FFF;	
-	vertical-align: middle;
+	text-align: left;
+	font-size: 12px;
+	color: #B3B3B2;
+	margin-top: 27px;
 	}
+	.brandSmall{
+	float: left;
+	margin: 15px 10px 15px 0;
+	}
+	.phoneNumber {
+	font-size: $secondary-header-size;
+	color: $color-white;
+	font-family: $font-primary;
+	}
+	.footerRight {
+	text-align: right;
+	display: inline-block;
+	margin-top: 27px;
+	}
+	.language {
+	margin-right: 5px;
+	color:$color-white;
+	a {
+		color:$color-white;
+	}
+	}
+	a.iconSocial{
+		padding:14px;
+		margin-right: 5px;
+	}
+	.iconFacebook{
+	 background: url("../images/mobilPlus-social-facebook-footer.svg");
+	background-repeat: no-repeat;
+	 background-position: center center;
+	}
+	.iconPhone{
+	 background: url("../images/mobilPlus-social-phone-footer.svg");
+	background-repeat: no-repeat;
+	 background-position: center center;
+	}
+
 }
-		 
 @media (max-width: 768px) {
 .tagsWord {
 	ul {
@@ -421,6 +461,38 @@ ul.gallery li.marginLiBottom {
 }
 .marginProductWireframe {
     margin-top: 0px;
+}
+footer {
+	min-height: 60px;
+	p {
+	text-align: center;
+	margin-top: 0;
+	}
+	.brandCenterPhone, .socialCenterPhone{
+		display: block; 
+		text-align:center; 
+	}
+	.socialCenterPhone{
+		margin-bottom: 10px;
+	}
+	.brandSmall{
+	float: none;
+	margin-right: 0;
+	}
+	.footerRight {
+	text-align: center;
+	display: inline-block;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	}
+	.language {
+	border: 1px solid $color-white;
+	padding: 7px 2px 7px 2px;
+	display:block;
+	width: 150px;
+	margin: 0px auto 15px auto;
+	font-size: 16px;
+	}
 }
 }
 @media (min-width: 768px) and (max-width: 991px) {
