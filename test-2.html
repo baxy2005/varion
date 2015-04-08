@@ -1,0 +1,847 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>Untitled Document</title>
+<!-- Important Owl stylesheet -->
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+<!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+    <style>
+    </style>
+    <script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+    	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+</head>
+<body>
+  <div id="loader">
+    <article class="fullheight">
+      <div class="hgroup">
+        <a href="#welcome"><img alt="Brand" src="images/mobilPlus-brandBig-eng.svg"></a>
+      </div>
+    </article>
+  </div><!-- loader -->
+  <header id="intro">
+    <article class="fullheight">
+      <div class="hgroup">
+        <img class="paddingArticleBottom" alt="Brand" src="images/mobilPlus-brandBig-eng.svg">
+        <h3><a href="#link7">Buy or rent Now</a></h3>
+        <h3><a href="#welcome">Find out more</a></h3>
+      </div>
+    </article>
+<nav class="navbar navbar-default" id="nav">
+  <div class="container-fluid">
+    <div class="container paddingZero">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      	<img alt="Brand" src="images/mobilPlus-brand-eng.svg">
+      </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#welcome">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#link2">Link</a></li>
+        <li><a href="#link3">Link</a></li>
+        <li><a href="#link4">Link</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+   </div> <!-- /.container -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>  
+<div class="container">
+	<article class="row paddingArticleTop" id="welcome">
+	    <div class="col-md-6 col-md-offset-3">
+			<h1>Do you know the feeling</h1>
+			<h2>when your mobile phone is running out of battery in the middle of a busy day or a stressy situation?</h2>
+		</div>
+		<div class="col-sm-4 col-md-4">
+			<h1>We do.</h1>
+			<h2>That is why we are here to offer our Mobile+Charger.</h2>
+            <img src="images/mobilPlus-tabletMobilIcon.svg" class="img-responsive center-block iconPadding" alt="Responsive image">
+			<p>Mobil+media has been developing, producing, selling and renting mobile phone charging stations since 2006 to all type of venues/events with customers, who could be in a need of electricity with their mobile phones, tablets, or any other electrical devices.</p>
+		</div>
+		<div class="col-sm-4 col-md-4">
+			<img src="images/mobilPlus-classic-sideAll-eng.png" class="img-responsive center-block" alt="Responsive image">
+		</div>
+		<div class="col-sm-4 col-md-4">
+			<h1>We do.</h1>
+			<h2>That is why we are here to offer our Mobile+Charger.</h2>
+            <img src="images/mobilPlus-chargingIcon.svg" class="img-responsive center-block iconPadding" alt="Responsive image">
+			<p>The need for electricity, recharging of mobile equipments has been growing ever since then, specially with the introduction of smart phones and the development of other mobile devices (tablets, iPads, media players, etc.).</p>
+        </div>
+	</article><!--Do you know the feeling-->
+</div><!--container main-->
+<div class="container-fluid bg-lightGray">
+	<div class="container paddingZero">           
+	<article class="row paddingArticleBottom " id="link2">
+	    <div class="col-md-12">
+			<h1 class="paddingTop">What is the mobil+charger?</h1>
+        </div>
+		<div class="col-md-4 col-md-offset-2">
+			<p class="paddingTop">The mobil+ charging station works as a self service charger for all types of smart phones, tablets, and other devices, with a locker function for safety. It also has an extra value with the illuminated advertising surface for the facility </p>
+		</div>
+		<div class="col-md-4">
+			<p class="paddingTop"> Even a possible money generater by renting it for a 3rd party. The mobil+ charging station can be also branded with a logo, brand identity, special headline, etc. for an even stronger impact on customers.</p>		
+        </div>
+        <div class="col-xs-12 col-md-12 paddingTop tagsWord">
+        <ul class="center-block">
+        	<li>Innovative, very much needed and appreciated service to customers</li>
+        	<li>Works with a safe locker system</li>
+        	<li>All smart phones can be charged (iPhone, USB)</li>
+        	<li>Self service</li>
+        	<li>Tablet and other device charging option</li>
+        	<li>Branding possibility</li>
+        	<li>Very visible, illuminated advertising surface</li>
+        </ul>
+<!--		Innovative, very much needed and appreciated service to customers
+            <span class="label label-default label-small">Works with a safe locker system</span>
+            <span class="label label-default label-small">All smart phones can be charged (iPhone, USB)</span>
+            <span class="label label-default label-small">Self service</span>
+            <span class="label label-default label-small">Tablet and other device charging option</span>
+            <span class="label label-default label-small">Branding possibility</span>
+            <span class="label label-default label-small">Very visible, illuminated advertising surface</span>
+-->        </div>  
+	</article><!--What is the mobil+charger?-->
+  </div><!--container-->  
+</div><!--container fluid-->   
+<div class="container-fluid bg-orange whyBgImage">
+	<div class="container paddingZero">              
+	<article class="row mainheight paddingArticle" id="link3">
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<h1>Mobile Charger to all facilities with customers</h1>
+            <h3>VENUES</h3>
+			<p>shopping centers, restaurants, pubs, clubs, gyms, sport facilities, offices, hotels, banks, airport, etc. for long term placement.</p>
+            <h3 class="shift">Events</h3>            
+            <p>conferences, festivals, company days, etc., where the need of rechargebility of the mobile phone is essential to anyone.</p>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<h1>Why Mobile Charger helps your business?</h1>
+            <h3>FOR VENUES</h3>
+            	<div class="col-sm-12 col-md-6">
+                  <ul>
+                      <li><strong>Improve</strong> your customer service</li>
+                      <li><strong>Improve</strong> customer satisfaction level</li>
+                      <li><strong>Gives</strong> a modern touch to your venue</li>
+                      <li><strong>Drive</strong> foot traffic</li>
+                  </ul>
+                </div>  
+            	<div class="col-xs-12 col-sm-12 col-md-6">
+                  <ul>
+                      <li><strong>Improve</strong> retention</li>
+                      <li><strong>Helps</strong> in the competition race</li>
+                      <li><strong>Welcome</strong> sponzors, advertisers</li>
+                  </ul>
+                </div>  
+            	<div class="col-xs-12 col-sm-6 col-md-12">
+            		<h3>FOR EVENTS</h3>
+            	</div>
+            	<div class="col-sm-12 col-md-6">
+                  <ul>
+                      <li><strong>Drive</strong> crowd to your spot</li>
+                      <li><strong>Increase</strong> interactions</li>
+                      <li><strong>Communicate</strong> your brand strongly</li>
+                  </ul>
+                </div>  
+            	<div class="col-xs-12 col-sm-12 col-md-6">
+                  <ul>
+                      <li><strong>Gives</strong> a modern touch to your brand/venue</li>
+                      <li><strong>Advertise</strong> to your audience</li>
+                  </ul>
+                </div>  
+		</div>
+	</article> <!--Why MobileCharger-->   
+  </div><!--container-->  
+</div><!--container fluid-->  
+<div class="container">       
+	<article class="row mainheight productLine paddingArticle" id="link4">
+	    <div class="col-md-12">
+             <h1>mobil+ charging station models</h1>
+            <h2>4 models are available to buy for the different needs of facilities.</h2>
+        </div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<img class="center-block img-responsive" src="images/mobilPlus-classicProduct2@.jpg" width="197" height="598" alt=""/>
+              <h4>"Classic 6"</h4> 
+			<p>for normal traffic places <br>
+		    (restaurants, pubs, <br>
+		    offices, etc.)</p>
+            <section class="simple">
+              <div class="boxIcon phone">
+                  <h5>6</h5>
+              </div>
+            </section> 
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<img class="center-block img-responsive clear" src="images/mobilPlus-classicProduct2@.jpg" width="197" height="598" alt=""/>
+              <h4>"Classic 6+tablet"</h4> 
+			<p>with the innovation for tablets and other devices (shopping centers, conferences,etc.)</p>
+            <section class="double">
+              <div class="boxIcon phone">
+                  <h5>6</h5>
+              </div>
+              <div class="boxIcon tablet">
+                  <h5>1</h5>
+              </div>
+            </section> 
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<img class="center-block img-responsive clear" src="images/mobilPlus-classicProduct2@.jpg" width="197" height="598" alt=""/>
+              <h4>"Classic 12" </h4> 
+			<p>with doubled charging capacity for heavy traffic places (conferences centers,exhibitions, festivals)</p>
+            <section class="simple">
+              <div class="boxIcon phone">
+                  <h5>12</h5>
+              </div>
+            </section> 
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<img src="images/mobilPlus-productLineClassicWireframe.png" alt="Responsive image" width="246" height="623" class="img-responsive center-block marginProductWireframe clear">
+            <h4 class="sizes">Sizes </h4> 
+            <p>a töltőállomás mérete: <br>
+            65 x 190 x 17 cm <br>
+            médiafelület mérete: <br>
+            54 x 71 cm</p>
+		</div>  
+      <div class="row paddingTop">  
+		<div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-3">
+        	<img class="center-block img-responsive" src="images/mobilPlus-metalProduct.png" width="245" height="588" alt=""/>
+			<h4>"Metal+tablet" </h4> 
+            <p>the big brother, with more charger, more device and advertising surface options,  (wellness centers, sport halls, gyms)</p>
+            <section class="double">
+              <div class="boxIcon phone">
+                  <h5>7</h5>
+              </div>
+              <div class="boxIcon tablet">
+                  <h5>1</h5>
+              </div>
+            </section>             
+	  </div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+            <img class="center-block img-responsive marginProductWireframe clear" src="images/mobilPlus-productLineMetalWireframe.png" width="263" height="608" alt=""/>
+            <h4 class="sizes">Sizes </h4> 
+			<p>a töltőállomás mérete:
+				<br>
+			  75 x 185 x 30 cm
+				<br>
+			  médiafelület mérete:
+				<br>
+			  42 x 152 cm frontpanel
+				<br>
+			  23 x 150 cm 2db oldalpanel</p>
+		</div>
+      </div>  
+  </article> <!--mobil+ charging station models--> 
+  <hr>
+  <article class="row paddingArticle" id="link5">
+	    <div class="col-md-12">
+			<h1>How does it work?</h1>
+            <h2>subheadline</h2>
+        </div>
+       <ul class="gallery">
+        	<li class="col-xs-12 col-sm-6 col-md-4">
+            	<a href="">
+                <div>
+                  <span class="zoom zoom-1"></span>
+                  <div class="cell">
+					<img src="images/mobilPlus-howDoesGfx.svg"  alt="" class="img-responsive">  
+                  </div>
+        			<img src="images/mobilPlus-howDoes-4.png" width="362" height="284" alt="" class="img-responsive">
+                </div>   
+            	</a>
+            </li>
+        	<li class="col-xs-12 col-sm-6 col-md-4">
+            	<a href="">
+                <div>
+                  <span class="zoom zoom-2"></span>
+                  <div class="cell">
+					<img src="images/mobilPlus-howDoesGfx-2.svg"  alt="" class="img-responsive">  
+                  </div>
+        			<img src="images/mobilPlus-howDoes-2.png" width="362" height="284" alt="" class="img-responsive">
+                </div>   
+            	</a>
+            </li>
+        	<li class="col-xs-12 col-sm-6 col-md-4">
+            	<a href="">
+                <div>
+                  <span class="zoom zoom-3"></span>
+                  <div class="cell">
+					<img src="images/mobilPlus-howDoesGfx-3.svg"  alt="" class="img-responsive">  
+                  </div>
+        			<img src="images/mobilPlus-howDoes-3.png" width="362" height="284" alt="" class="img-responsive">
+                </div>   
+            	</a>
+            </li>
+        	<li class="col-xs-12 col-sm-6 col-md-4 marginLiBottom">
+            	<a href="">
+                <div>
+                  <span class="zoom zoom-4"></span>
+                  <div class="cell">
+					<img src="images/mobilPlus-howDoesGfx-4.svg"  alt="" class="img-responsive">  
+                  </div>
+        			<img src="images/mobilPlus-howDoes-5.png" width="362" height="284" alt="" class="img-responsive">
+                </div>   
+            	</a>
+            </li>
+        	<li class="col-xs-12 col-sm-6 col-md-4 marginLiBottom">
+            	<a href="">
+                <div>
+                  <span class="zoom zoom-3"></span>
+                  <div class="cell">
+					<img src="images/mobilPlus-howDoesGfx-5.svg"  alt="" class="img-responsive">  
+                  </div>
+        			<img src="images/mobilPlus-howDoes-3.png" width="362" height="284" alt="" class="img-responsive">
+                </div>   
+            	</a>
+            </li>
+        	<li class="col-xs-12 col-sm-6 col-md-4 marginLiBottom">
+            	<a href="">
+                <div>
+                  <span class="zoom zoom-6"></span>
+                  <div class="cell">
+					<img src="images/mobilPlus-howDoesGfx-6.svg"  alt="" class="img-responsive">  
+                  </div>
+        			<img src="images/mobilPlus-howDoes-1.png" width="362" height="284" alt="" class="img-responsive">
+                </div>   
+            	</a>
+            </li>
+        </ul>
+	</article> <!--how does it work-->
+  <hr>
+	<article class="row paddingArticle clients" id="link6">
+		<span class="12">
+			<h1>Our Clients</h1>
+            <h2>who charge with us</h2>
+        </span>
+	    <span class="12">
+			<h4 class="sizes">VANUES</h4>
+        </span>
+		<div id="owl-demo" class="owl-carousel owl-theme">
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+    </div><!--owl vanues -->
+	    <span class="12">
+			<h4 class="sizes">EVENTS</h4>
+        </span>
+		<div id="owl-demo-2" class="owl-carousel owl-theme">
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-client-demo1-tn@2x.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Palace of Arts</h5>
+				</a>              
+			</div>
+    </div><!--owl events -->
+	    <span class="12">
+			<h4 class="sizes">ADVERTISERS</h4>
+        </span>
+		<div id="owl-demo-3" class="owl-carousel owl-theme">
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-1.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Vodafone</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-2.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Deutsche Telekom</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-3.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Telenor</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-4.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Volkswagen</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-5.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Peugeot</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-6.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Land Rover</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-7.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>Playboy</h5>
+				</a>              
+			</div>
+			<div class="item">
+				<a class="fancybox" data-fancybox-group="vanues" href="images/mobilPlus-client-demo1.JPG" title="Palace of Arts">
+					<img src="images/mobilPlus-clients-advetisers-8.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<h5>AVON</h5>
+				</a>              
+			</div>
+    </div><!--owl advetisers -->
+	</article> <!--Our Clients-->
+</div><!--container-->
+<div class="container-fluid bg-lightGray">
+	<div class="container paddingZero">
+    	<section class="row paddingArticle" id="link7">
+          <div class="col-xs-12 col-md-12">
+			<h1>Contact Us</h1>
+            <h2>Keep in touch</h2>
+          </div>
+		<div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-2">
+			<address>
+  				<strong>Mobil+Charger Inc.</strong><br>
+ 				1184 Budapest, Gyöngyvirág u. 24c <br>
+				tel./fax: +36 1 290 9654
+            </address>    
+			<address>    
+                <strong>Dobi József</strong><br>
+				mobil: +36 20 977 7768<br>
+			  <a href="mailtio:dobi.jozsef@mobilplusmedia.hu">dobi.jozsef@mobilplusmedia.hu</a>
+			</address>    
+			<address>
+				<strong>Kisteleki Zsuzsanna</strong><br>
+				mobil: +36 30 507 1608<br>
+			  <a href="mailto:kisteleki.zsuzsa@mobilplusmedia.hu">kisteleki.zsuzsa@mobilplusmedia.hu</a>
+			</address>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-2">
+			<form>
+           	 <div class="form-group">
+              <label for="exampleInputEmail1">First name</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+           	 </div>
+           	 <div class="form-group">
+              <label for="exampleInputPassword1">Last name</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+           	 </div>
+           	 <div class="form-group">
+              <label for="exampleInputPassword1">Email address</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+           	 </div>		             		
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-3">
+              <label for="exampleInputPassword1">Your message</label>
+              <textarea class="form-control" rows="9"></textarea>
+        </div>  
+        </form>
+	</section> <!--Our Clients-->  
+  </div><!--container-->  
+</div><!--container fluid-->      
+<div class="container-fluid bg-darkGray">
+  <footer class="container paddingZero">
+    <div class="row">
+ 	   <div class="col-xs-12 col-md-6 pull-left">
+       	<span class="brandCenterPhone">
+           <a href="#">
+              <img class="brandSmall"alt="Brand" src="images/mobilPlus-brandFooterSmall.svg">
+           </a>
+         </span>
+          <p>Copyright © 2015 Mobile+Charger | webdesign: <a href="http://www.varadi.tv" target="_blank">www.varadi.tv</a></p>
+      	</div>
+      <div class="col-xs-12 col-md-6 pull-right footerRight">
+      	<span class="socialCenterPhone">
+     		<span class="language"> <a href="#">HUN</a>
+            </span>
+        </span>
+        <span class="socialCenterPhone">
+            <span class="social"><a href="#" class="iconSocial iconFacebook"></a><a href="#" class="iconSocial iconPhone"></a></span>
+            </span>
+        </span>     
+            <span class="phoneNumber"><strong>Call Now</strong> +36 1 290 9456
+            </span>
+      	</div>        
+    </div>  <!--row-->
+  </footer><!--container-->
+</div><!--container fluid-->
+
+<script type="text/javascript" src="js/jquery.scrollmagic.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+<script src="js/respond.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="owl-carousel/owl.carousel.js"></script>
+     <script>
+    $(document).ready(function() {
+
+      var owl = $("#owl-demo");
+	 
+
+      owl.owlCarousel({
+
+      items : 4, //10 items above 1000px browser width
+      itemsDesktop : [1199,4], //5 items between 1000px and 901px
+      itemsDesktopSmall : [979,3], // 3 items betweem 900px and 601px
+      itemsTablet: [768,2], //2 items between 600 and 0;
+      itemsMobile :  	[479,1], // itemsMobile disabled - inherit from itemsTablet option
+	   lazyLoad : true,
+      });
+	  
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+	
+	var owldos = $("#owl-demo-2");
+
+   owldos.owlCarousel({
+
+      items : 4, //10 items above 1000px browser width
+      itemsDesktop : [1199,4], //5 items between 1000px and 901px
+      itemsDesktopSmall : [979,3], // 3 items betweem 900px and 601px
+      itemsTablet: [768,2], //2 items between 600 and 0;
+      itemsMobile :  	[479,1], // itemsMobile disabled - inherit from itemsTablet option
+	   lazyLoad : true,
+      });
+	  
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+	  
+		var owltres = $("#owl-demo-3");
+
+   owltres.owlCarousel({
+
+      items : 4, //10 items above 1000px browser width
+      itemsDesktop : [1199,4], //5 items between 1000px and 901px
+      itemsDesktopSmall : [979,3], // 3 items betweem 900px and 601px
+      itemsTablet: [768,2], //2 items between 600 and 0;
+      itemsMobile :  	[479,1], // itemsMobile disabled - inherit from itemsTablet option
+	   lazyLoad : true,
+      });
+	  
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+      $(".play").click(function(){
+        owl.trigger('owl.play',1000);
+      })
+      $(".stop").click(function(){
+        owl.trigger('owl.stop');
+      })
+
+    });
+	
+    </script>
+<script src="js/script.js"></script>
+<script src="http://localhost:35729/livereload.js"></script>
+</body>
+  <a class="fancybox" data-fancybox-group="vanues" href="images/gallery/babolygo/babolygo-epulet-02.jpg"></a>
+</html>
