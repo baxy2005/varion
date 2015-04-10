@@ -9,8 +9,7 @@
 @import "mixins";
 
 #owl-demo .item, #owl-demo-2 .item, #owl-demo-3 .item{
-		border:$color-lightGray solid 1px;
-        padding: 15px 0px;
+        padding: 0px;
         margin: 0 10px;
         color: $color-primary;
         text-align: center;
@@ -264,6 +263,7 @@ hr {
 		background-color: $color-primary;
 		color: $color-white;
 		@include headline;
+		padding: 10px 2px 6px 2px;
 	}
 	.sizes {
 		@include headline;
@@ -272,10 +272,10 @@ hr {
 		border: solid $color-secondary 1px;
 	}
 	p {
-		width: 239px;
 		font-size: 14px;
 		margin: 0 auto;
 		margin-bottom: 20px;
+		width: 85%;
 	}
 }
 .clients .sizes {
@@ -293,13 +293,18 @@ hr {
 			font-size: 20px;
 			text-align: center;
 			margin-top: 15px;
-			margin-bottom: 10px;
+			margin-bottom: 0;
+			color: $color-secondary;
 		}
 		p {
 			width: 100%;
 		}
-		a:hover {
+		a:hover, h5:hover {
 		color: $color-primary;
+		text-decoration: none;	
+		}
+		.owl-controls {
+			margin-bottom: 15px;
 		}
 }
 .boxIcon {
@@ -342,9 +347,12 @@ hr {
 	@include opacity(0.9)
 }
 #loader .fullheight {
-	@include display-flex();
-	@include align-items(center);
-	@include justify-content(center);	
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 header .fullheight {
   background: url("../images/mobilPlus-nyitokep-4.jpg");
@@ -616,7 +624,7 @@ footer {
 }
 }
 @media (min-width: 321px) and (max-width: 767px) {
-#link5 .col-xs-12, #link4 .col-xs-12 {
+#link5 .col-xs-12{
     width: 50%;
 }
 header .fullheight {
