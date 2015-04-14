@@ -8,16 +8,6 @@ $("#loader").fadeOut("slow");
 		opacity: 1
 	}, speedOpacity, function() {});
 	
-	  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: false,
-    itemWidth: 290,
-    itemMargin: 1,
-    minItems: 1,
-    maxItems: 4
-  });
-
-
 });
 
 	$(document).ready(function(){
@@ -91,9 +81,11 @@ $("#loader").fadeOut("slow");
 	
 	});
 
-var topoffset = 90;
+  var topoffset = 90;
+
   var isTouch = 'ontouchstart' in document.documentElement;
 
+  //window height
   var wheight = $(window).height(); //get height of the window
 
   $('.fullheight').css('height', wheight);
@@ -101,7 +93,8 @@ var topoffset = 90;
   $(window).resize(function() {
     var wheight = $(window).height(); //get height of the window
     $('.fullheight').css('height', wheight);
-  })
+  }) //on resize
+
   
 // Animated Scrolling
   $('a[href*=#]:not([href=#])').click(function() {
@@ -132,6 +125,21 @@ var topoffset = 90;
       $('a[href$="#link3"]').addClass('active');
     } //windowpos
 
+    if (windowpos > $('#link4').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#link4"]').addClass('active');
+    } //windowpos
+	
+    if (windowpos > $('#link6').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#link6"]').addClass('active');
+    } //windowpos
+    if (windowpos > $('#link7').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#link7"]').addClass('active');
+    } //windowpos
+
+
   }); //window scroll
 
 
@@ -146,7 +154,4 @@ var topoffset = 90;
   var pin = new ScrollScene({
     triggerElement: '#nav',
   }).setPin('#nav').addTo(controller);
-  
-  
-
-
+ 

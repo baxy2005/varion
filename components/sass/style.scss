@@ -253,7 +253,17 @@ hr {
 	width: 100%;
 }
 .bg-lightGray {
-	background-color: $color-lightGray;	
+	background-image:url(../images/gradient-bottom.png);
+	background-position: top center;
+	background-repeat: repeat-x;
+	background-size: 2px 140px;
+	background-color: #E6E6E6;		
+}
+.bottomGradient {
+	background-image:url(../images/gradient-top.png);
+	background-position: bottom center;
+	background-repeat: repeat-x;
+	background-size: 2px 140px;
 }
 .bg-darkGray {
 	background-color: $color-secondary;	
@@ -391,12 +401,29 @@ header .fullheight {
 .navbar {
     margin-bottom: 0px;
     border: none;
+	border-radius: 0px;
+	.fixed {
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	}
+	.default {
+		position: relative;
+	}
 }
 .mainheight {
 	min-height:600px;	
 }
 .navbar-brand {
 	padding: 6px 0 6px 15px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: $color-lightOrange;
+	font-family: $font-primary;
+	font-size: 16px;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #FFF;
 }
 ul.navbar-nav {
 	a {
@@ -456,6 +483,43 @@ footer {
 	 background-position: center center;
 	}
 
+}
+footer .pull-left a {
+	color: #B3B3B2;
+}
+.navbar-default  {
+	 .phoneNumber {
+	font-size: $secondary-header-size;
+	color: $color-white;
+	font-family: $font-primary;
+	display: inline-block;
+	width: 80%;
+	text-align: right;
+	margin-top: 9px;
+	margin-bottom: 5px;
+	 }
+	 	a.iconSocial{
+		padding:14px;
+		margin-right: 5px;
+	}
+	.iconFacebook{
+	 background: url("../images/mobilPlus-social-facebook-header.svg");
+	background-repeat: no-repeat;
+	 background-position: center center;
+	}
+	.iconPhone{
+	 background: url("../images/mobilPlus-social-phone-header.svg");
+	background-repeat: no-repeat;
+	 background-position: center center;
+	}
+}
+.form-control:focus {
+border-color: $color-primary;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(241, 100, 52, 0.6);
+}
+label {
+	font-weight: normal;
+	color: #999;	
 }
 #welcome, #link2, #link3, #link4, #link5, #link6, #link7, #link8, .whyBgImage, .bg-lightGray {
 	opacity: 0; 
