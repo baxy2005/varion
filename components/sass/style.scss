@@ -256,14 +256,17 @@ hr {
 	background-image:url(../images/gradient-bottom.png);
 	background-position: top center;
 	background-repeat: repeat-x;
-	background-size: 2px 140px;
+	background-size: 2px 185px;
 	background-color: #E6E6E6;		
+}
+.bg-lightGrayOK {
+	background-color: $color-lightGray;		
 }
 .bottomGradient {
 	background-image:url(../images/gradient-top.png);
 	background-position: bottom center;
 	background-repeat: repeat-x;
-	background-size: 2px 140px;
+	background-size: 2px 185px;
 }
 .bg-darkGray {
 	background-color: $color-secondary;	
@@ -561,6 +564,11 @@ label {
 		margin-bottom: 5px;	
 	}
 }
+.shBox {
+	background: url("../images/mobilPlus-brandBig-eng-sh.png");
+	background-repeat: no-repeat;
+	background-size: 223px 138px;
+}
 .tagsWord {
 	ul {
 		@include paddingMarginZero;
@@ -687,10 +695,24 @@ footer {
 	margin-bottom: 30px !important;
 }
 }
-@media (min-width: 321px) and (max-width: 767px) {
-#link5 .col-xs-12{
-    width: 50%;
+@media (min-width: 321px) and (max-width: 700px) {
+header .fullheight {
+  background: url("../images/mobilPlus-nyitokep-4.jpg");
+  background-repeat: no-repeat;
+  background-position: -150px center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
+}
+@media (min-width: 480px) and (max-width: 767px) {
 header .fullheight {
   background: url("../images/mobilPlus-nyitokep-4.jpg");
   background-repeat: no-repeat;
@@ -705,6 +727,11 @@ header .fullheight {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+}}
+
+@media (min-width: 321px) and (max-width: 767px) {
+#link5 .col-xs-12{
+    width: 50%;
 }
 	.hgroup {
 		.paddingArticleBottom {
