@@ -297,7 +297,7 @@
 </div><!--container fluid-->
 <div class="container-fluid bg-lightGray">
 	<div class="container paddingZero">           
-	<article class="row paddingArticleBottom " id="link2">
+	<article class="row paddingArticleBottomSmaller " id="link2">
 	    <div class="col-md-12">
 			<h1 class="paddingTop">What is the Mobil+ Charger?</h1>
         </div>
