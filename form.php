@@ -11,6 +11,12 @@
 <link rel="stylesheet" href="owl-carousel/owl.theme.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+#welcome, #link2, #link3, #link4, #link5, #link6, #link7, #link8, .whyBgImage, .bg-lightGray {
+	opacity: 1; 
+}
+</style>
+
     <script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
     	<!-- Add mousewheel plugin (this is optional) -->
 	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
@@ -708,7 +714,9 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
     	<section class="row paddingArticle" id="link7">
           <div class="col-xs-12 col-md-12">
 			<h1>Contact Us</h1>
-            <h2>keep in touch</h2>
+           		<a name="contact">
+ 					<h2>keep in touch</h2>
+ 				</a>
           </div>
 		<div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-2">
 			<address>
@@ -726,7 +734,7 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
 		<div class="col-xs-12 col-sm-6 col-md-2">
 			<form action="http://www.varadi.tv/works/mobilplus/web/form.php#contact" method="post" role="form">
            	 <div class="form-group">
-              <label for="exampleInputEmail1">First name <span class="required">required</span></label>
+              <label for="exampleInputEmail1">First name<span class="required">required</span></label>
               <input name="firstname" type="text" class="form-control" id="exampleInputEmail1" >
            	 </div>
            	 <div class="form-group">
@@ -742,6 +750,135 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
               <label for="exampleInputPassword1">Your message</label>
               <textarea name="textarea" class="form-control" rows="9"></textarea>
               <input class="btn btn-primary btn-block" type="submit" value="Submit"></input>
+              <br>
+  <!--php starts-->
+  <?
+		function show_form()
+{
+ echo"<div align='center' class='kenyer'>please fill out the email section</div>";
+}
+$name=$_POST['firstname'];
+$name=$_POST['lastname'];
+$email=$_POST['email'];
+$textarea=$_POST['textarea'];
+
+$to="Mobil+ Charger<andris@varadi.tv>";
+//$to="Laszlo Pop <training@argintinternational.com>";
+//$message="$firstName $lastName has just sent you a Training Registration\n\nTraining type $select\n\nTitle: $title\n\nFirstname: $firstName\n\nLastname: $lastName\n\nPhone: $phoneContact\n\nEmail: $email\n\nProfession: $selectKetto\n\nCompany name: $companyName\n\nCompany address: $companyAddress\n\nAccomodation: $selectHarom\n\nAccompany name: $accompanyName\n\nPayment options: $selectNegy\n\nComments: $textarea\n\nPrivacy statement: $checkboxEgy";
+
+
+$subject = "Enquiry to Mobil+ Charger";
+/**/
+require("class.phpmailer.php");
+$mail = new PHPMailer();
+
+$mail->From = $to;
+$mail->FromName = " Mobil+ Charger";
+$mail->SingleTo = true;
+$mail->AddAddress($to, "");
+
+$mail->WordWrap = 50;                                 // set word wrap to 50 characters
+$mail->IsHTML(true);                                  // set email format to HTML
+
+$mail->Subject = $subject;
+$message= '
+<html>
+<head>
+  <title>'.$subject.'</title>
+<style type="text/css">
+.style14 {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #000000; }
+</style>
+</head>
+<body leftmargin="0" rightmargin="0" topmargin="0">
+<table style="font-family:Arial, Helvetica, sans-serif; font-size: 13px; line-height: 120%;" width="650" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><br>
+      <br>
+      <br>
+      <table style=" font-family: Arial, Helvetica, sans-serif;" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><span class="style14"><img src="http://www.varadi.tv/argint/images/topBox2.jpg" width="100%" height="12" /></span></td>
+        </tr>
+        <tr>
+          <td bgcolor="#C9C9C9"><table width="633" border="0" cellpadding="0" cellspacing="3" style="margin-left: 10px; font-size:13px;">
+            <tbody>
+              <tr>
+                <td height="30" colspan="2" align="center" valign="middle" class="td1"><strong>Enquiry to Mobil+ Charger</strong></td>
+              </tr>
+              <tr>
+                <td valign="top" class="td1"><span class="kenyer">Firstname</span></td>
+                <td valign="top" class="td2"><span class="p5">'.$firstname.'</span></td>
+              </tr>
+              <tr>
+                <td width="170" valign="top" class="td1"><p class="p6"><span class="kenyer">Lastname</span><br>
+                </p></td>
+                <td valign="top" class="td2"><p class="p5">'.$lastname.'</p></td>
+              </tr>
+              <tr>
+                <td width="170" valign="top" class="td1"><p class="p6"><span class="kenyer">E-mail </span><br>
+                </p></td>
+                <td valign="top" class="td2"><p class="p5">'.$email.'</p></td>
+              </tr>
+              <tr>
+                <td width="170" valign="top" class="td3"><p class="p5"><span class="kenyer">Message</span></p></td>
+                <td valign="top" class="td4"><p class="p5">'.$textarea.'</p></td>
+              </tr>
+            </tbody>
+          </table></td>
+        </tr>
+        <tr>
+          <td><span class="style14"><img src="http://www.varadi.tv/argint/images/bottomBox2.jpg" width="100%" height="10" /></span></td>
+        </tr>
+      </table>
+      <br>
+      <br></td>
+  </tr>
+</table>
+</body>
+</html>';
+$mail->Body = $message;
+/**/
+
+
+ if (!isset($email) or !isset($name)) {
+     show_form();
+}
+else {
+  if (empty($email)) {
+      echo "<div align='center' class='style15'>Please fill out the first name form</div>";}
+if (empty($lastname)) {
+      echo "<div align='center' class='style15'>Please fill out the last name form</div>";
+  }
+  if (empty($firstname)) {
+      echo "<div align='center' class='style15'>Please fill out the email form</div>";
+  }
+else {
+//     if (empty($subject)) { 
+//             $subject="Online Training Registration";  }
+//
+//     $sent = mail( "Laszlo Pop <andris@varadi.tv>", 
+//                $subject,$message, "From: $email" );
+
+     if($mail->Send()) {
+		echo "<div align='center' class='style15'>Thank you for your enquiry, we will get back to you soon</div>";  
+     }
+     else {
+        echo "<div align='left' class='linkbig'>There is a Problem:</div>
+              <br><div align='left' class='style2'>The server was unable to send your
+                   mail.</div>";
+        }
+
+$u_to_address = $email;
+$u_from_address = $to;
+$u_txt = implode('', file('automail.txt'));
+$u_subject = 'Thank you';
+print " ";
+//mail($u_to_address, $u_subject, $u_txt, "From: $u_from_address");
+  }
+}
+?>
+  <!--php ends-->
+              
         </div>  
         </form>
 	</section> <!--Our Clients-->  
