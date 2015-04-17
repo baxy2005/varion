@@ -284,7 +284,7 @@
 			<p>Mobil+ media has been developing, producing, selling and renting mobile phone charging stations since 2006 to all type of venues/events with customers, who could be in a need of electricity with their mobile phones, tablets, or any other electrical devices.</p>
 		</div>
 		<div class="col-sm-4 col-md-4">
-			<img src="images/mobilPlus-classic-sideAll-eng.png" alt="Responsive image" width="295" height="590" class="img-responsive center-block">
+			<img src="images/mobilPlus-classic-sideAll-eng.png" alt="Responsive image" width="295" height="590" class="img-responsive center-block mainProduct">
 		</div>
 		<div class="col-sm-4 col-md-4">
 			<h1>We do.</h1>
@@ -336,12 +336,12 @@
             <h3>VENUES</h3>
 			<p>shopping centers, restaurants, pubs, clubs, gyms, sport facilities, offices, hotels, banks, airport, etc. for long term placement.</p>
             <h3 class="shift">Events</h3>            
-            <p>conferences, festivals, company days, etc., where the need of rechargebility of the mobile phone is essential to anyone.</p>
+            <p class="lastItem">conferences, festivals, company days, etc., where the need of rechargebility of the mobile phone is essential to anyone.</p>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-6">
 			<h1>Why Mobile Charger helps your business?</h1>
             <h3>FOR VENUES</h3>
-            	<div class="col-sm-12 col-md-6">
+            	<div class="col-xs-12 col-sm-12 col-md-6">
                   <ul>
                       <li><strong>Improve</strong> your customer service</li>
                       <li><strong>Improve</strong> customer satisfaction level</li>
@@ -359,7 +359,7 @@
             	<div class="col-xs-12 col-sm-6 col-md-12">
             		<h3>FOR EVENTS</h3>
             	</div>
-            	<div class="col-sm-12 col-md-6">
+            	<div class="col-xs-12 col-sm-12 col-md-6">
                   <ul>
                       <li><strong>Drive</strong> crowd to your spot</li>
                       <li><strong>Increase</strong> interactions</li>
@@ -389,7 +389,7 @@
 		    (restaurants, pubs, <br>
 		    offices, etc.)</p>
             <section class="simple">
-              <div class="boxIcon phone">
+              <div class="boxIcon phone lastItem">
                   <h5>6</h5>
               </div>
             </section> 
@@ -436,7 +436,7 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
               <div class="boxIcon phone">
                   <h5>6</h5>
               </div>
-              <div class="boxIcon tablet">
+              <div class="boxIcon tablet lastItem">
                   <h5>1</h5>
               </div>
             </section>             

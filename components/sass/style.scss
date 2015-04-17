@@ -625,6 +625,9 @@ label {
   -webkit-justify-content: center;
   justify-content: center;
 	}
+.lastItem {
+	margin-bottom: $paddingArticle-mobil !important;
+	}
 .paddingArticle{
 	padding-top: $paddingArticle-mobil;
 	padding-bottom: $paddingArticle-mobil;
@@ -632,7 +635,7 @@ label {
 .paddingArticleTop{
 	padding-top: $paddingArticle-mobil;
 }
-.paddingArticleBottom{
+.paddingArticleBottom, .paddingArticleBottomSmaller{
 	padding-bottom: $paddingArticle-mobil;
 }
 h1{
@@ -670,7 +673,9 @@ p {
 ul.gallery  {
 	li {
 		margin-bottom: $paddingArticle-mobil;
-
+	}
+	li:last-child{
+		margin-bottom:0px !important;
 	}
 }
 ul.gallery li.marginLiBottom {
