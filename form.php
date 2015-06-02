@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <meta content="© mobil plus media" name="copyright"></meta>
-<title>mobil+ media</title>
+<meta content="chargerstation, mobile phone charger, mobile charger, charger for event, chargerstation for event, mobile charger for event, töltőállomás, mobiltelefon töltőállomás" name="keywords"></meta>
+<meta content="Buy or rent a mobile phone charging stations from us for events, venues in Europe! Perfect tool to solve the charging problems of all guests and have a great media surface!" name="description"></meta>
+<title>Mobil+ Charger</title>
 <!-- Important Owl stylesheet -->
 <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
 <!-- Default Theme -->
@@ -542,37 +544,37 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
 		<div id="owl-demo" class="owl-carousel owl-theme">
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="venues" href="images/clients/mobilPlus-clients-venues-airport.jpg" title="VIP Lounge">
-					<img src="images/clients/mobilPlus-clients-venues-airportTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl"  data-src="images/clients/mobilPlus-clients-venues-airportTn.jpg" width="100" height="100" alt="">
 					<h5>Liszt Ferenc Airport</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="venues" href="images/clients/mobilPlus-clients-venues-mom.jpg" title="VIP Lounge">
-					<img src="images/clients/mobilPlus-clients-venues-momTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-venues-momTn.jpg" width="100" height="100" alt="">
 					<h5>MOM Park Shopping Center</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="venues" href="images/clients/mobilPlus-clients-venues-alle.jpg" title="VIP Lounge">
-					<img src="images/clients/mobilPlus-clients-venues-alleTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-venues-alleTn.jpg" width="100" height="100" alt="">
 					<h5>Allee Shopping Center</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="venues" href="images/clients/mobilPlus-clients-venues-korzo.jpg" title="VIP Lounge">
-					<img src="images/clients/mobilPlus-clients-venues-korzoTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-venues-korzoTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
 					<h5>KORZÓ Shopping Center</h5>
 				</a>              
 			</div>   
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="venues" href="images/clients/mobilPlus-clients-venues-fitnesFactory.jpg" title="VIP Lounge">
-					<img src="images/clients/mobilPlus-clients-venues-fitnesFactoryTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-venues-fitnesFactoryTn.jpg" width="100" height="100" alt="">
 					<h5>Fitness Factory</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="venues" href="images/clients/mobilPlus-clients-venues-prima.jpg" title="VIP Lounge">
-					<img src="images/clients/mobilPlus-clients-venues-primaTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-venues-primaTn.jpg" width="100" height="100" alt="">
 					<h5>Príma Wellness</h5>
 				</a>              
 			</div>                                                                              
@@ -583,73 +585,73 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
 		<div id="owl-demo-2" class="owl-carousel owl-theme">
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-eu.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-euTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-euTn.jpg" width="100" height="100" alt="">
 					<h5>EU conference</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-sound.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-soundTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-soundTn.jpg" width="100" height="100" alt="">
 					<h5>Balaton Sound Festival</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-volt.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-voltTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-voltTn.jpg" width="100" height="100" alt="">
 					<h5>Volt Festival</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-olx.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-olxTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-olxTn.jpg" width="100" height="100" alt="">
 					<h5>OLX relax</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-arena.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-arenaTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-arenaTn.jpg" width="100" height="100" alt="">
 					<h5>Arena Festival</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-motorola.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-motorolaTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-motorolaTn.jpg" width="100" height="100" alt="">
 					<h5>Motorola Conference</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-smartMobil.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-smartMobilTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-smartMobilTn.jpg" width="100" height="100" alt="">
 					<h5>Smart Mobile Conference</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-mol.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-molTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-molTn.jpg" width="100" height="100" alt="">
 					<h5>MOL Festival</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-funzine.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-funzineTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-funzineTn.jpg" width="100" height="100" alt="">
 					<h5>Funzine Magazin</h5>
 				</a>              
 			</div>      
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-reklamFest.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-reklamFestTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-reklamFestTn.jpg" width="100" height="100" alt="">
 					<h5>Reklam Fest</h5>
 				</a>              
 			</div>   
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-reklamWeek.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-reklamWeekTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-reklamWeekTn.jpg" width="100" height="100" alt="">
 					<h5>Reklam Week</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="events" href="images/clients/mobilPlus-clients-events-szinFest.jpg" title="Palace of Arts">
-					<img src="images/clients/mobilPlus-clients-events-szinFestTn.jpg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img class="img-responsive img-circle center-block lazyOwl" data-src="images/clients/mobilPlus-clients-events-szinFestTn.jpg" width="100" height="100" alt="">
 					<h5>Szin Fest</h5>
 				</a>              
 			</div>
@@ -660,49 +662,49 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
 		<div id="owl-demo-3" class="owl-carousel owl-theme">
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-vodafone.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-1.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-1.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>Vodafone</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-telekom.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-2.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-2.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>Deutsche Telekom</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-telenor.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-3.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-3.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>Telenor</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-volkswagen.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-4.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-4.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>Volkswagen</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-peugeot.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-5.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-5.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>Peugeot</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-landRover.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-6.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-6.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>Land Rover</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-playboy.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-7.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-7.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>Playboy</h5>
 				</a>              
 			</div>
 			<div class="item">
 				<a class="fancybox" data-fancybox-group="ad" href="images/clients/mobilPlus-clients-ad-avon.jpg" title="Palace of Arts">
-					<img src="images/mobilPlus-clients-advetisers-8.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block">
+					<img data-src="images/mobilPlus-clients-advetisers-8.svg" width="100" height="100" alt="" class="img-responsive img-circle center-block lazyOwl">
 					<h5>AVON</h5>
 				</a>              
 			</div>
@@ -728,7 +730,7 @@ heavy traffic places (conferences centers,exhibitions, festivals)</p>
 			<address>
 				<strong>Kisteleki Zsuzsanna</strong><br>
 				mobil: +36 30 507 1608<br>
-			  <a href="mailto:kisteleki.zsuzsa@mobilplusmedia.hu">kisteleki.zsuzsa(at)mobilplusmedia.hu</a>
+			  <a href="mailto:zsuzsa.kisteleki@mobilepluscharger.com">zsuzsa.kisteleki(at)mobilepluscharger.com</a>
 			</address>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-2">
@@ -762,7 +764,7 @@ $name=$_POST['lastname'];
 $email=$_POST['email'];
 $textarea=$_POST['textarea'];
 
-$to="Mobil+ Charger<andris@varadi.tv>";
+$to="Mobil+ Charger<zsuzsa.kisteleki@mobilepluscharger.com>";
 //$to="Laszlo Pop <training@argintinternational.com>";
 //$message="$firstName $lastName has just sent you a Training Registration\n\nTraining type $select\n\nTitle: $title\n\nFirstname: $firstName\n\nLastname: $lastName\n\nPhone: $phoneContact\n\nEmail: $email\n\nProfession: $selectKetto\n\nCompany name: $companyName\n\nCompany address: $companyAddress\n\nAccomodation: $selectHarom\n\nAccompany name: $accompanyName\n\nPayment options: $selectNegy\n\nComments: $textarea\n\nPrivacy statement: $checkboxEgy";
 
@@ -893,7 +895,7 @@ print " ";
               <img class="brandSmall"alt="Brand" src="images/mobilPlus-brandFooterSmall.svg">
            </a>
          </span>
-          <p>Copyright © 2015 Mobile+Charger | webdesign: <a href="http://www.varadi.tv" target="_blank">www.varadi.tv</a></p>      	</div>
+          <p>Copyright © 2015 Mobile+ Charger | webdesign: <a href="http://www.varadi.tv" target="_blank">www.varadi.tv</a></p>      	</div>
       <div class="col-xs-12 col-md-6 pull-right footerRight">
       	<span class="socialCenterPhone">
      		<span class="language"> 
