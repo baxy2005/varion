@@ -409,6 +409,21 @@ header .fullheight {
   -webkit-justify-content: center;
   justify-content: center;
 }
+header .fullheight.event {
+  background: url("../images/mobilPlus-EventBgImage01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 .whyBgImage {
 	  background: url("../images/mobilPlus-whyBgImage.jpg");
   background-repeat: no-repeat;
