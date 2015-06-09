@@ -410,7 +410,7 @@ header .fullheight {
   justify-content: center;
 }
 header .fullheight.event {
-  background: url("../images/mobilPlus-EventBgImage01.jpg");
+   background: url("../images/mobilPlus-EventBgImage01.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -423,6 +423,70 @@ header .fullheight.event {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+}
+header .fullheightEvent{
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/*carousel*/
+.openingheader {
+	z-index: 14;
+	position: absolute;
+	text-align: center;
+	display: table;
+	width: 100%;
+	}
+#carousel-example-generic .item {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel.fade {
+  opacity: 1;
+}
+
+.carousel.fade .item {
+  transition: opacity ease-out .7s;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block;
+}
+
+.carousel.fade .item:first-child {
+  top: auto;
+  opacity: 0;
+  position: relative;
+}
+
+.carousel.fade .item.active {
+  opacity: 1;
+}
+
+.carousel-control {
+  opacity: 0;
+  z-index: 999;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+  background-image: none;
 }
 .whyBgImage {
 	  background: url("../images/mobilPlus-whyBgImage.jpg");
@@ -595,6 +659,10 @@ label {
 	to { opacity: 1; }
 }
 @media (max-width: 768px) {
+	.carousel-indicators {
+
+		display: none;
+	}
 	.hgroup {
 		.paddingArticleBottom {
 			padding-bottom: 40px;
@@ -643,6 +711,36 @@ label {
   -webkit-justify-content: center;
   justify-content: center;
 	}
+	header .fullheight.event {
+   background: url("../images/mobilPlus-EventBgImage01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+header .fullheightEvent{
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 .lastItem {
 	margin-bottom: $paddingArticle-mobil !important;
 	}
@@ -756,10 +854,70 @@ header .fullheight {
   -webkit-justify-content: center;
   justify-content: center;
 }
+header .fullheight.event {
+   background: url("../images/mobilPlus-EventBgImage01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+header .fullheightEvent{
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
 }
 @media (min-width: 480px) and (max-width: 767px) {
 header .fullheight {
   background: url("../images/mobilPlus-nyitokep-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+header .fullheight.event {
+   background: url("../images/mobilPlus-EventBgImage01.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+header .fullheightEvent{
+  background: transparent;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;

@@ -155,3 +155,17 @@ $("#loader").fadeOut("slow");
     triggerElement: '#nav',
   }).setPin('#nav').addTo(controller);
  
+
+ $('.carousel').carousel()
+
+var wheight = $(window).height();
+
+$ ('.fullheight, .fullheightEvent ').css('height', wheight);
+
+// replace img inside carousel with a bg image
+
+$ ('#carousel-example-generic .item img').each(function() {
+	var imgSrc = $(this).attr('src');
+	$(this).parent().css({'background-image': 'url('+imgSrc+')'});
+	$(this).remove();
+});
