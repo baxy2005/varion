@@ -3,7 +3,7 @@ scheme: ftp
 host: varadi.tv
 username: baxy2005
 password: 4LI5Raht8vDqQ2gZ
-path: public_html/works/mobilplus/web
+path: public_html/works/varion/dev
 
 # Optional
 exclude:
