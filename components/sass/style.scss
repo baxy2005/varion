@@ -15,12 +15,7 @@
 @import "variables";
 @import "mixins";
 
-#owl-demo .item, #owl-demo-2 .item, #owl-demo-3 .item{
-        padding: 0px;
-        margin: 0 10px;
-        color: $color-primary;
-        text-align: center;
-    }
+
     .customNavigation{
       text-align: center;
     }
@@ -33,14 +28,6 @@
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
-#loader{
-	z-index:999999;
-	display:block;
-	position:fixed;
-	width:100%;
-	height:100%;
-	background-color: $color-primary;
-}
 
 body {
 	opacity: 1;
@@ -56,13 +43,12 @@ body.body-animate {
 .clear {
 	clear: both;
 }
-.required {
-	font-size: 10px;
-	color: $color-primary;
-	padding-left: 5px;
-}
 a {
 	color: $color-primary;
+}
+a:hover {
+	color: $color-secondary;
+	text-decoration: none;
 }
 h1, h2, p {
 	text-align: center;
@@ -87,18 +73,23 @@ p {
 	color: $color-secondary;
 	line-height: 22px;
 }
-.btn-primary {
-    color: #FFF;
-    background-color: $color-primary;
-    border: none;
-	margin-top: 15px;
-	margin-bottom: 15px;
+/*carusel typo*/
+.carousel-caption {
+font-family: $font-primary;
+text-shadow: none;
+right: 7%;
+left: 7%;
+text-align: right;
+	h3{
+font-size: 64px !important;
+	}
 }
-.btn-primary:hover {
-    color: #FFF;
-    background-color: darken( $color-primary, 10% );
-    border: none;
+
+.carousel-indicators {
+    bottom: 10px;
 }
+
+
 .paddingZero {
 	padding:0px;	
 }
@@ -107,277 +98,17 @@ p {
 	float: none;
 	clear: both;	
 }
-.iconPadding {
-	margin-top:100px;
-	margin-bottom: 30px;	
-}
-.iconPaddingBigger {
-	margin-top:201px;
-}
-.label-small {
-	border: 1px solid $color-border;
-	background-color: transparent;
-	border-radius: 0px;
-	color: $color-secondary;
-	font-size: 14px;
-	line-height: 3;
-}
-.linkWrap {
-}
-.hgroup {
-		height: 126px;
-		h3 {
-			@include headlineBox;
-			margin-bottom: 15px;
-		}
-		a {
-			color: $color-white;	
-			padding: 15px 0 11px 0;
-			display: block;
-			font-size: 18px;
-		}
-		a:hover {
-			color: $color-primary;	
-			background: $color-white;
-			text-decoration:none;
-		}
-		.paddingArticleBottom {
-			padding-bottom: 100px;
-		}
-}
-.tagsWord {
-	ul {
-		@include paddingMarginZero;
-		list-style: none;	
-		text-align: center;
-	}
-	li {
-	border: 1px solid $color-border;
-	color: $color-secondary;
-	font-family: $font-primary;
-	padding: 8px 15px 6px 15px;
-	font-weight: bold;
-	margin: 7px 7px;
-	display: inline-block;
-	}
-}
-.bg-orange{
-	background: $color-primary;
-		h1 {
-			color: $color-white;
-	}
-		p {
-			color: $color-white;
-			width: 360px;
-			margin: 0 auto;
-		}
-		h3 {
-			@include headlineBox;
-			padding: 15px 0 11px 0;
-			margin-top: 60px;
-			margin-bottom: 35px;
-			width: 165px;
-		}
-		ul {
-			padding: 0;
-			list-style: none;
-			margin: 0;
-		}
-		li {
-			color: $color-white;
-			text-indent:0.4em;
-			background: url(../images/mobilPlus-check.svg);
-			background-position:0 2px;
-			background-repeat:no-repeat;
-			font-family: $font-primary;
-			font-size: 14px;
-			padding: 0.15em 0 0.5em 1.5em;
-		}
-		.shift {
-			margin-top: 120px;
-		}
-}
-ul.gallery  {
-	list-style: outside none none;
-	margin: 0px;
-	padding: 0px;
-	li {
-		display: inline-block;
-		margin-bottom: 30px;
-		max-width: 100%
 
-	}
-	.cell {
-	@include display-flex();
-	@include align-items(center);
-	@include justify-content(center);
-	z-index:4;	
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	height: 100%;
-	padding: 10px;
-	}
-	.zoom {
-	background: url("../images/mobilPlus-howDoesColor.png") no-repeat scroll center center;
-	@include zoomPrep;
-	}
-	.zoom-1 {
-	background: url("../images/mobilPlus-howDoesGray-4.jpg") no-repeat scroll center center;
-	@include zoomPrep;
-	}
-	.zoom-2 {
-	background: url("../images/mobilPlus-howDoesGray-2.jpg") no-repeat scroll center center;
-	@include zoomPrep;
-	}
-	.zoom-3 {
-	background: url("../images/mobilPlus-howDoesGray-3.jpg") no-repeat scroll center center;
-	@include zoomPrep;
-	}
-	.zoom-4 {
-	background: url("../images/mobilPlus-howDoesGray-5.jpg") no-repeat scroll center center;
-	@include zoomPrep;
-	}
-	.zoom-6 {
-	background: url("../images/mobilPlus-howDoesGray-1.jpg") no-repeat scroll center center;
-	@include zoomPrep;
-	}
-	.zoom:hover {
-	opacity: 1;
-	position: absolute;
-	transition-duration: 1s;
-	z-index: 10;	
-	}
-	
-	div{
-	text-align: center;
-	position: relative;
-	overflow: hidden;
-	}
-}
-.paddingArticle{
-	padding-top: 60px;
-	padding-bottom: 60px;
-}
-.paddingArticleTop{
-	padding-top: 60px;
-}
-.paddingArticleBottom{
-	padding-bottom: 60px;
-}
-.paddingArticleBottomSmaller{
-	padding-bottom: 53px;
-}
-.marginProductWireframe {
-	margin-top:  -18px;
-}
+
 ul.gallery li.marginLiBottom {
 	margin-bottom: 0px !important;
 }
 .paddingTop {
 	padding-top: 40px;
 }
-.boxSecondMargin {
-	margin-top: 80px;	
-}
-hr {
-	color: F4F4F4;
-	@include paddingMarginZero;
-	border-width: 3px 0px 0px;
-	width: 100%;
-}
-.bg-lightGray {
-	background-image:url(../images/gradient-bottom.png);
-	background-position: top center;
-	background-repeat: repeat-x;
-	background-size: 2px 185px;
-	background-color: #E6E6E6;		
-}
-.bg-lightGrayOK {
-	background-color: $color-lightGray;		
-}
-.bottomGradient {
-	background-image:url(../images/gradient-top.png);
-	background-position: bottom center;
-	background-repeat: repeat-x;
-	background-size: 2px 185px;
-}
-.bg-darkGray {
-	background-color: $color-secondary;	
-}
-.productLine, .clients {
-	h4 {
-		background-color: $color-primary;
-		color: $color-white;
-		@include headline;
-		padding: 10px 2px 6px 2px;
-	}
-	.sizes {
-		@include headline;
-		background-color: $color-white;
-		color: $color-primary;
-		border: solid $color-secondary 1px;
-	}
-	p {
-		font-size: 14px;
-		margin: 0 auto;
-		margin-bottom: 20px;
-		width: 85%;
-	}
-}
-.clients .sizes {
-		margin-top:0;
-		margin-bottom:25px;
-		float: none;
-		clear:both;
-}
-.clients {
-		h2 { 
-			margin-bottom: 25px;
-			}
-		h5 {
-			font-family: $font-primary;
-			font-size: 20px;
-			text-align: center;
-			margin-top: 15px;
-			margin-bottom: 0;
-			color: $color-secondary;
-		}
-		p {
-			width: 100%;
-		}
-		a:hover, h5:hover {
-		color: $color-primary;
-		text-decoration: none;	
-		}
-		.owl-controls {
-			margin-bottom: 15px;
-		}
-}
-.boxIcon {
-	width: 71px;
-	height: 71px;
-	float: left;
-	@include display-flex();
-	@include align-items(center);
-	@include justify-content(center);
-	h5{
-	color: $color-primary;
-	font-family: $font-primary;	
-	font-weight: bold;
-	font-size: $secondary-header-size;
-	text-align: center;
-/*	padding-top: 17px;*/	
-		}
-}
-.double {
-	width: 149px;
-	margin: 0 auto;
-}
-.simple {
-	width: 71px;
-	margin: 0 auto;
-}
+
+
+
 .phone {
 		background: url("../images/mobilPlus-phoneIcon.svg");
 		margin-right: 7px;
@@ -392,14 +123,7 @@ hr {
     min-height: 120px;
 	background: $color-white;
 }
-#loader .fullheight {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
+
 header .fullheight {
   background: url("../images/mobilPlus-nyitokep-4.jpg");
   background-repeat: no-repeat;
@@ -494,22 +218,7 @@ header .fullheightEvent{
 .carousel-control.left {
   background-image: none;
 }
-.whyBgImage {
-	  background: url("../images/mobilPlus-whyBgImage.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 
-}
 #nav {
 	z-index: 100;	
 }
@@ -532,6 +241,8 @@ header .fullheightEvent{
 .navbar-brand {
 	padding: 0;
 	margin:0 !important;
+height: 120px;
+width: 167px;
 }
 .navbar-default .navbar-nav > li > a {
     color: $color-lightOrange;
@@ -552,52 +263,7 @@ ul.navbar-nav {
 address, label {
 	color: $color-secondary;
 }
-footer {
-	min-height: 60px;
-	p {
-	text-align: left;
-	font-size: 12px;
-	color: #B3B3B2;
-	margin-top: 27px;
-	}
-	.brandSmall{
-	float: left;
-	margin: 15px 10px 15px 0;
-	}
-	.phoneNumber {
-	font-size: $secondary-header-size;
-	color: $color-white;
-	font-family: $font-primary;
-	}
-	.footerRight {
-	text-align: right;
-	display: inline-block;
-	margin-top: 27px;
-	}
-	.language {
-	margin-right: 5px;
-	color:$color-white;
-	a {
-		color:$color-white;
-	}
-	}
-	a.iconSocial{
-		padding:14px;
-		margin-right: 5px;
-	}
-	.iconFacebook{
-	background-repeat: no-repeat;
-	 background-position: center center;
-	}
-	.iconPhone{
-	background-repeat: no-repeat;
-	 background-position: center center;
-	}
 
-}
-footer .pull-left a {
-	color: #B3B3B2;
-}
 .navbar-default  {
 	 .phoneNumber {
 	font-size: $secondary-header-size;
@@ -663,6 +329,32 @@ label {
 	to { opacity: 1; }
 }
 @media (max-width: 768px) {
+	
+	.navbar-toggle {
+		margin-top: 17px;
+	}
+	
+	.navbar {
+    min-height: 60px;
+	}
+	
+	.navbar-brand {
+height: 72px;
+width: 100px;
+margin: -3px 0 0px 15px !important;
+}
+
+.carousel-indicators {
+    bottom: 5px;
+}
+.carousel-caption {
+	text-align: center;
+	right: 5%;
+	left: 5%;
+h3 {
+	font-size: 36px !important;
+}
+}
 	.hgroup {
 		.paddingArticleBottom {
 			padding-bottom: 40px;
@@ -836,6 +528,15 @@ footer {
 @media (min-width: 768px) and (max-width: 991px) {
 	ul.gallery li.marginLiBottom {
 	margin-bottom: 30px !important;
+}
+.navbar {
+    min-height: 110px;
+	}
+.navbar-brand {
+	padding: 0;
+	margin:5px !important;
+height: 20px;
+width: 130px;
 }
 }
 @media (min-width: 321px) and (max-width: 700px) {
