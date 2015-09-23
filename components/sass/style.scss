@@ -45,8 +45,9 @@ body.body-animate {
 }
 a {
 	color: $color-primary;
+	outline: 0 !important;
 }
-a:hover {
+a:hover, a:active, a:focus {
 	color: $color-secondary;
 	text-decoration: none;
 }
@@ -107,8 +108,28 @@ ul.gallery li.marginLiBottom {
 	padding-top: 40px;
 }
 
+.carousel-control .glyphicon-chevron-right {
+background: url("../images/varion-control-right-01.svg");
+background-size: 26px 53px;
+background-position: 0 0;
+width: 26px !important;
+height: 53px !important;
+}
+
+.carousel-control .glyphicon-chevron-left {
+background: url("../images/varion-control-left-01.svg");
+background-size: 26px 53px;
+background-position: 0 0;
+width: 26px !important;
+height: 53px !important;
+}
 
 
+.glyphicon-chevron-right::before, .glyphicon-chevron-left::before {
+
+    content: none;
+
+}
 .phone {
 		background: url("../images/mobilPlus-phoneIcon.svg");
 		margin-right: 7px;
@@ -211,12 +232,11 @@ header .fullheightEvent{
 
 .carousel-control {
   opacity: 0;
-  z-index: 999;
+  z-index: 90;
 }
 
 .carousel-control.right,
 .carousel-control.left {
-  background-image: none;
 }
 
 #nav {
@@ -276,7 +296,11 @@ address, label {
 	margin-bottom: 5px;
 	 }
 	 	a.iconSocial{
-		padding:14px;
+		padding:14px 18px 14px 14px;
+		margin-right: 5px;
+	}
+	 	a.iconSocialTwo{
+		padding:14px 25px 14px 0px;
 		margin-right: 5px;
 	}
 	.iconFacebook{
@@ -284,6 +308,11 @@ address, label {
 	 background-position: center center;
 	}
 	.iconPhone{
+	 background: url("../images/varion-circle.svg");
+	background-repeat: no-repeat;
+	 background-position: right 24px;
+	}
+	.iconHun{
 	 background: url("../images/varion-circle.svg");
 	background-repeat: no-repeat;
 	 background-position: right 24px;
