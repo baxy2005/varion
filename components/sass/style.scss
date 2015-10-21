@@ -36,9 +36,6 @@ body {
 body.body-animate {
 	opacity: 0;
 }
-.fade-in {
-	opacity:0;
-}
 
 .clear {
 	clear: both;
@@ -51,29 +48,6 @@ a:hover, a:active, a:focus {
 	color: $color-secondary;
 	text-decoration: none;
 }
-h1, h2, p {
-	text-align: center;
-}
-h1{
-	font-family: $font-primary;
-	color: $color-primary;
-	font-size: $main-header-size;
-	margin-bottom: 0px;
-	margin-top: 0;
-}
-h2 {
-	font-family: $font-primary;
-	font-size: $secondary-header-size;
-	color: $color-secondary;
-	margin-top: 8px;
-	margin-bottom: 40px;
-}
-p {	
-	font-family: $font-secondary;
-	font-size: $main-paragraph-size;
-	color: $color-secondary;
-	line-height: 22px;
-}
 /*carusel typo*/
 .carousel-caption {
 font-family: $font-primary;
@@ -85,50 +59,23 @@ text-align: right;
 font-size: 64px !important;
 	}
 }
-
-.carousel-indicators {
-    bottom: 10px;
-}
-
-
 .paddingZero {
 	padding:0px;	
 }
-.paddingTop {
-	padding-top: 50px;
-	float: none;
-	clear: both;	
+.carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-chevron-left {
+width: 26px !important;
+height: 53px !important;
+background-size: 26px 53px;
+background-position: 0 0;
 }
-
-
-ul.gallery li.marginLiBottom {
-	margin-bottom: 0px !important;
-}
-.paddingTop {
-	padding-top: 40px;
-}
-
 .carousel-control .glyphicon-chevron-right {
 background: url("../images/varion-control-right-01.svg");
-background-size: 26px 53px;
-background-position: 0 0;
-width: 26px !important;
-height: 53px !important;
 }
-
 .carousel-control .glyphicon-chevron-left {
 background: url("../images/varion-control-left-01.svg");
-background-size: 26px 53px;
-background-position: 0 0;
-width: 26px !important;
-height: 53px !important;
 }
-
-
 .glyphicon-chevron-right::before, .glyphicon-chevron-left::before {
-
     content: none;
-
 }
 .phone {
 		background: url("../images/mobilPlus-phoneIcon.svg");
@@ -137,28 +84,10 @@ height: 53px !important;
 .tablet {
 		background: url("../images/mobilPlus-tabletIcon.svg");
 }
-.test {
-	background: $color-secondary;
-}
+
 .navbar {
     min-height: 120px;
 	background: $color-white;
-}
-
-header .fullheight {
-  background: url("../images/mobilPlus-nyitokep-4.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 header .fullheight.event {
    background: url("../images/feeling/varion-feeling-01.jpg");
@@ -175,21 +104,7 @@ header .fullheight.event {
   -webkit-justify-content: center;
   justify-content: center;
 }
-header .fullheightEvent{
-  background: transparent;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
+
 /*carousel*/
 .openingheader {
 	z-index: 14;
@@ -233,10 +148,6 @@ header .fullheightEvent{
 .carousel-control {
   opacity: 0;
   z-index: 90;
-}
-
-.carousel-control.right,
-.carousel-control.left {
 }
 
 #nav {
@@ -318,45 +229,7 @@ address, label {
 	 background-position: right 24px;
 	}
 }
-.form-control:focus {
-border-color: $color-primary;
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(241, 100, 52, 0.6);
-}
-label {
-	font-weight: normal;
-	color: #999;	
-}
-#welcome, #link2, #link3, #link4, #link5, #link6, #link7, #link8, .whyBgImage, .bg-lightGray {
-	opacity: 0; 
-}
 
-#welcome.fade-in, #link2.fade-in, #link3.fade-in, #link4.fade-in, #link5.fade-in, #link6.fade-in, #link7.fade-in, #link8.fade-in, .whyBgImage.fade-in, .bg-lightGray.fade-in {
-	opacity: 1;
-	animation: opacityAnimate 1s 1 ease-in-out;
-	-webkit-animation: opacityAnimate 1s 1 ease-in-out;
-	-moz-animation: opacityAnimate 1s 1 ease-in-out;
-	-o-animation: opacityAnimate 1s 1 ease-in-out;
-}
-
-@keyframes opacityAnimate {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-@-webkit-keyframes opacityAnimate {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-@-moz-keyframes opacityAnimate {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-@-o-keyframes opacityAnimate {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
 @media (max-width: 768px) {
 	
 	.navbar-toggle {
@@ -393,116 +266,19 @@ h3 {
 		background-color: rgba(0, 0, 0, 0.3);
 	}
 }
-.shBox {
-	background: url("../images/mobilPlus-brandBig-eng-sh.png");
-	background-repeat: no-repeat;
-	background-size: 223px 138px;
-}
-.tagsWord {
-	ul {
-		@include paddingMarginZero;
-		list-style: none;	
-		text-align: center;
-	}
-	li {
-	padding: 8px 15px 6px 15px;
-	margin: 7px 0px;
-	display: block;
-	width: 100%
-	}
-	li:last-child{
-		margin-bottom:0px;
-	}
-}
+
+
+
 .paddingZero {
 	padding:0px;	
 }
-	header .fullheight {
-	background: url("../images/mobilPlus-nyitokep-4.jpg");
-  background-repeat: no-repeat;
-  background-position: -40px center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-	}
-	header .fullheight.event {
-   background: url("../images/mobilPlus-EventBgImage01.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-header .fullheightEvent{
-  background: transparent;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-.lastItem {
-	margin-bottom: $paddingArticle-mobil !important;
-	}
-.paddingArticle{
-	padding-top: $paddingArticle-mobil;
-	padding-bottom: $paddingArticle-mobil;
-}
-.paddingArticleTop{
-	padding-top: $paddingArticle-mobil;
-}
-.paddingArticleBottom, .paddingArticleBottomSmaller{
-	padding-bottom: $paddingArticle-mobil;
-}
-h1{
-	font-size: $main-header-size-mobil;
-}
-h2 {
-	font-size: $secondary-header-size-mobil;
-	margin-top: 7px;
-	margin-bottom: 15px;
-}
-p {	
-	font-size: $main-paragraph-size-mobil;
-	line-height: 20px;
-}
+	
+
 .iconPadding {
 	margin-top: $paddingArticle-mobil;
 	margin-bottom: $paddingArticle-mobil;
 }
-.bg-orange {
-	h3 {
-	margin-top: $paddingArticle-mobil;
-	margin-bottom: $paddingArticle-mobil;
-	}
-	p{
-		width: 100%;
-	}
-	.shift {
-    margin-top: $paddingArticle-mobil;
-}
-}
+
 .paddingTop {
     padding-top: $paddingArticle-mobil;
 }
@@ -521,43 +297,8 @@ ul.gallery li.marginLiBottom {
 .marginProductWireframe {
     margin-top: 0px;
 }
-footer {
-	min-height: 60px;
-	p {
-	text-align: center;
-	margin-top: 0;
-	}
-	.brandCenterPhone, .socialCenterPhone{
-		display: block; 
-		text-align:center; 
-	}
-	.socialCenterPhone{
-		margin-bottom: 10px;
-	}
-	.brandSmall{
-	float: none;
-	margin-right: 0;
-	}
-	.footerRight {
-	text-align: center;
-	display: inline-block;
-	margin-top: 0px;
-	margin-bottom: 10px;
-	}
-	.language {
-	border: 1px solid $color-white;
-	padding: 7px 2px 7px 2px;
-	display:block;
-	width: 150px;
-	margin: 0px auto 15px auto;
-	font-size: 16px;
-	}
-}
 }
 @media (min-width: 768px) and (max-width: 991px) {
-	ul.gallery li.marginLiBottom {
-	margin-bottom: 30px !important;
-}
 .navbar {
     min-height: 110px;
 	}
@@ -568,124 +309,5 @@ height: 20px;
 width: 130px;
 }
 }
-@media (min-width: 321px) and (max-width: 700px) {
-header .fullheight {
-  background: url("../images/mobilPlus-nyitokep-4.jpg");
-  background-repeat: no-repeat;
-  background-position: -150px center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-header .fullheight.event {
-   background: url("../images/mobilPlus-EventBgImage01.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-header .fullheightEvent{
-  background: transparent;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-}
-@media (min-width: 480px) and (max-width: 767px) {
-header .fullheight {
-  background: url("../images/mobilPlus-nyitokep-4.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-header .fullheight.event {
-   background: url("../images/mobilPlus-EventBgImage01.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-header .fullheightEvent{
-  background: transparent;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-}
 
-@media (min-width: 321px) and (max-width: 767px) {
-#link5 .col-xs-12{
-    width: 50%;
-}
-	.hgroup {
-		text-align: center;
-		.paddingArticleBottom {
-			padding-bottom: 20px;
-		}
-	h3 {
-		margin-bottom: 5px;	
-		display: inline-block;
-	}
-	a {
-		width: 230px
-	}
-}
-
-.flexslider .slides li {
-    width: 240px !important;
-    float: left;
-    display: block;
-}
-
-}
 
